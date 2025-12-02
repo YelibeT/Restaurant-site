@@ -1,21 +1,112 @@
-.navs{
+:root{
+    --background: #f7cc9b;
+    --background-dish: #ffeedd;
+    --food-hover: #bb9d71;
+    --background-button: #ac4120;
+    --btn: #ff5722;
+    --btn-hover: #e2491a;
+    --text-color: #3e2723;
+    
+}
+body{
+    background-color: var(--background);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+}
+nav{
     display: flex;
+    justify-content: center;
     list-style: none;
     gap: 30px;
 }
+nav a{
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: var(--background-button);
+    color: white;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: 300ms ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+nav a:hover{
+    background-color: var(--btn-hover);
+}
+form{
+    position: relative;
+    margin: auto;
+    width: 400px;
+}
+#search-input{
+    box-sizing: border-box;
+    padding: 12px 20px;
+    width: 100%;
+    background: none;
+    border: 2px solid var(--food-hover);
+    border-radius: 1000px;
+    font: inherit;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    caret-color: white;
+   
+}
+#search-input::placeholder{
+    color: white;
+}
+#search-input:focus{
+    outline: var(--background);
+}
+#search-btn{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding: 0 30px;
+    border: none;
+    border-radius: 1000px;
+    font: inherit;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+#search-btn:hover{
+    background-color: var(--food-hover);
+}
 .dishes{
+    margin-top: 20px;
     display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     grid-template-columns: repeat(4,1fr);
     gap: 10px;
 }
-.menu{
-    align-items: center;
+.food{
     text-align: center;
+    background-color: var(--background-dish);
+    padding: 15px;
+    border-radius:50px ;
+    font-size: 25px;
+    transition: 300ms ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.food:hover{
+    background-color: var(--food-hover);
 }
 img{
-    width: 150px;
+    width: 200px !important;
+    height: 200px !important;
     height: auto;
+    object-fit: cover;
+    border-radius:50%;   
+    transition:600ms ease;
+}
+img:hover{
+    transform: scale(1.1);
 }
 a{
     text-decoration: none;
+    color: var(--text-color);
+    transition:300ms ease;
+}
+a:hover{
+    color: var(--btn-hover);
 }

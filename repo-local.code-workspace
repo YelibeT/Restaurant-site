@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Demo-repo"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "repo-local"
+	}
+}

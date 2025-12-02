@@ -1,20 +1,34 @@
+:root{
+    --background: #f7cc9b;
+    --background-dish: #ffeedd;
+    --food-hover: #bb9d71;
+    --background-button: #ac4120;
+    --btn: #ff5722;
+    --btn-hover: #e2491a;
+    --text-color: #1f0f0d;
+    --footer:#f7b66c;
+}
 body{
-    background-color: white;
+    background-color: var(--background);
     font-family: 'Courier New', Courier, monospace;
 }
 nav{
-    
     display: flex;
-}
-.container{
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 .navs{
     display: flex;
     list-style: none;
     gap: 30px;
+}
+.navs a{
+    padding: 8px 18px;
+    border-radius: 25px;
+    background-color: var(--background-button);
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
 .intro{
     color: white;
@@ -22,22 +36,68 @@ nav{
     text-align: center;
     display: flex;
     background-image: url('images/background.jpg');
-    background-size: cover;
-    background-position: center;
+    background-size:cover;
+    height: 80vh;
     background-attachment: fixed;
-    background-repeat: no-repeat; 
+    transition: 300ms ease; 
 }
 .specials{
     text-align: center;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 20px;
+    transition: 300ms ease; 
 }
-img{
-    width: 150px;
+#Home h3{
+    text-align: center;
+    font-size: 35px;
+}
+.food{
+    text-align: center;
+    background-color: var(--background-dish);
+    padding: 15px;
+    border-radius:50px ;
+    font-size: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: 300ms ease;
+}
+.food:hover{
+    background-color: var(--food-hover);
+}
+.specials img{
+    width: 200px !important;
+    height: 200px !important;
     height: auto;
+    object-fit: cover;
+    border-radius:50%;   
+    transition:600ms ease;
+}
+.specials img:hover{
+    transform: scale(1.1);
 }
 a{
-    color: black;
     text-decoration: none;
+    color: var(--text-color);
+    transition:300ms ease;
+    cursor: pointer;
+}
+a:hover{
+    color: var(--btn-hover);
+}
+footer{
+    background-color: var(--footer);
+    color: var(--text-color);
+    padding: 25px 20px;
+    font-size: 16px;
+    margin-top: 50px;
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+}
+footer:hover{
+    background-color: #bb9d71;
+}
+.bottom{
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+
 }

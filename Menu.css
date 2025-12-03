@@ -13,25 +13,6 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-color);
 }
-nav{
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 30px;
-}
-nav a{
-    text-decoration: none;
-    padding: 10px 20px;
-    background-color: var(--background-button);
-    color: white;
-    font-weight: 600;
-    border-radius: 50px;
-    transition: 300ms ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-nav a:hover{
-    background-color: var(--btn-hover);
-}
 form{
     position: relative;
     margin: auto;
@@ -46,8 +27,8 @@ form{
     border-radius: 1000px;
     font: inherit;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    background-color: var(--background-button);
     caret-color: white;
-   
 }
 #search-input::placeholder{
     color: white;
@@ -71,25 +52,93 @@ form{
     background-color: var(--food-hover);
 }
 .dishes{
-    margin-top: 20px;
     display: grid;
-    align-items: center;
-    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+h1{
+    grid-column: 1/-1;
     text-align: center;
-    grid-template-columns: repeat(4,1fr);
-    gap: 10px;
+}
+.dishes h2{
+    justify-self:center;
+    text-align: center;
+    background-color: var(--background-button);
+    padding: 10px 20px;
+    width: 200px;
+    color: white;
+    border-radius: 50px;
 }
 .food{
-    text-align: center;
+    margin-top: 20px;
+    gap: 10px;
     background-color: var(--background-dish);
     padding: 15px;
-    border-radius:50px ;
+    border-radius:50px;
     font-size: 25px;
     transition: 300ms ease;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
+.food a {
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
 .food:hover{
     background-color: var(--food-hover);
+}
+.popup {
+    position: fixed;
+    inset: 0;                                
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);          
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms ease;
+    z-index: 9999;                           
+}
+.popup:target {
+    visibility: visible;
+    opacity: 1;
+}
+.popup-window {
+    background: white;
+    position: relative;
+    padding: 30px;
+    width: 350px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+#popup-btn{
+    padding: 8px 18px;
+    border-radius: 25px;
+    background-color: var(--background-button);
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    border: none;
+}
+#popup-btn:hover{
+    background-color: #581703;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 35px;
+    color: black;
+    font-weight: bold;
+}
+
+.close:hover {
+    color: red;
 }
 img{
     width: 200px !important;

@@ -1,1 +1,2 @@
 This project emphasizes on the need of shift in focus for Ethiopian food. The Ethiopian restaurant website aims in promoting Ethiopian cultural food.
+The Abyssinia Restaurant website focuses on the diversity and modernization of the Ethiopian cuisine. It has a home, menu and about us page. Each page contains navigation bar to each other. The design is simple and uses the same color pallet throughout the pages.

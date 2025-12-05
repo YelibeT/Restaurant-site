@@ -1,12 +1,12 @@
 :root{
-    --background: #f7cc9b;
-    --background-dish: #ffeedd;
-    --food-hover: #bb9d71;
-    --background-button: #ac4120;
-    --btn: #ff5722;
-    --btn-hover: #e2491a;
-    --text-color: #1f0f0d;
-    --footer:#f7b66c;
+    --background: #ffffff;
+    --background-dish: #c2c2bc;
+    --food-hover: #3f3f3f;
+    --background-button: #202020;
+    --btn: #c9c9c9;
+    --btn-hover: #ffffff;
+    --text-color: #000000;
+    --footer:#e0e0e0;
 }
 body{
     background-color: var(--background);
@@ -32,12 +32,14 @@ nav{
     box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
 .intro{
-    color: white;
-    justify-content: center;
-    text-align: center;
+    color: black;
     display: flex;
-    background-image: url('images/background.jpg');
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('images/imagesback.jpg');
     background-size:cover;
+
     height: 80vh;
     background-attachment: fixed;
     transition: 300ms ease; 
@@ -49,7 +51,7 @@ nav{
     gap: 20px;
     transition: 300ms ease; 
 }
-#Home h3{
+h3{
     text-align: center;
     font-size: 35px;
 }
@@ -145,12 +147,8 @@ footer{
     margin-top: 50px;
     box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
 }
-footer:hover{
-    background-color: #bb9d71;
-}
 .bottom{
     text-align: center;
     font-size: 14px;
     color: #555;
-
 }

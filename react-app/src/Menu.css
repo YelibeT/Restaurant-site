@@ -127,7 +127,6 @@ h1{
 }
 .popup-window {
     background: white;
-    position: relative;
     padding: 30px;
     width: 350px;
     border-radius: 15px;

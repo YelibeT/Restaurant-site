@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Non-fasting",
+    "active": true
+  },
+  {
+    "name": "Fasting",
+    "active": true
+  }
+]

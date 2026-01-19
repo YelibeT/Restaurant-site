@@ -1,17 +1,13 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
-const menuItemSchema = new mongoose.Schema({
+const menuSchema = new mongoose.Schema({
   name: { type: String, required: true },
   description: String,
   price: { type: Number, required: true },
   category: { type: mongoose.Schema.Types.ObjectId, ref: "Category", required: true },
   available: { type: Boolean, default: true },
-  addons: [
-    {
-      name: String,
-      price: Number,
-    },
-  ],
+  isFasting: {type: Boolean, default: false, required: true},
 });
+const Menu= new mongoose.model("Menu", menuSchema)
 
-module.exports = mongoose.model("MenuItem", menuItemSchema);
+export default Menu;

@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Dirikosh Firfir",
+    "price": 1000,
+    "description": "Traditional Ethiopian firfir",
+    "category": "Non-fasting",
+    "available": true,
+    "fasting": false,
+    "image": "/images/ድርቆሽ.jpg"
+  },
+  {
+    "name": "Tegebino",
+    "price": 850,
+    "description": "Spicy fasting shiro",
+    "category": "Fasting",
+    "available": true,
+    "fasting": true,
+    "image": "/images/ተጋቢኖ.jpg"
+  },
+  {
+    "name": "Kitfo",
+    "price": 1200,
+    "description": "Minced raw beef with spices",
+    "category": "Non-fasting",
+    "available": true,
+    "fasting": false,
+    "image": "/images/kitfo.jpg"
+  }
+]

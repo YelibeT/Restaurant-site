@@ -1,17 +1,17 @@
 import axios from 'axios';
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Menu() {
   const [query, setQuery]=useState("");
-  const [fasting, setFasting]=useState("");
+  const [fasting, setFasting]=useState(false);
   const [menuItem, setMenuItems]=useState([]);
-  const [loading, setLoading]= useState("false")
+  const [loading, setLoading]= useState(false)
 
   useEffect(()=>{
     const fetchMenu= async()=>{
       try{
         setLoading(true)
-        let url=`/api/menu/items`;
+        let url = "http://localhost:5000/api/menu/items";
         if(query){
           url= `/api/menu/search?q=${encodeURIComponent(query)}`
         }
@@ -20,11 +20,11 @@ export default function Menu() {
         }
         const result=await axios.get(url);
         setMenuItems(result.data);
-        setLoading(false)
       }
       catch(error){
         console.error(error);
-        setLoading(false)
+      }finally{
+        setLoading(false);
       }
     }
     fetchMenu();
@@ -46,7 +46,7 @@ export default function Menu() {
           <input
             type="checkbox"
             checked={fasting}
-            onChange={(e)=>setFasting(!fasting)}
+            onChange={(e)=>setFasting(e.target.checked)}
           />{" "}
           Fasting
         </label>
@@ -64,11 +64,11 @@ export default function Menu() {
                 className={type==="Fasting" ? "fasting": ""}
                 >
                 <h2>{type}</h2>
-                {menuItem.filter((item)=>(type==="Fasting"&& item.isFasting)||
-                (type==="Non-fasting"&&!item.isFasting)
+                {menuItem.filter((item)=>(type==="Fasting" && item.fasting)||
+                (type==="Non-fasting" && !item.fasting)
               ).map((item)=>(
                 <div key={item._id} className="food">
-                  <a href="#popup" title="click for more details">
+                  <a href="#popup-$item._id" title="click for more details">
                     <img src={item.image} alt={item.name}/>
                     <h3>{item.name}</h3>
                   </a>

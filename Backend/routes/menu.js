@@ -13,14 +13,15 @@ router.get("/categories", async (req, res) => {
   }
 });
 
+
 router.get("/items", async (req, res) => {
   try {
     const {fasting}=req.query;
-    const filter={ active: true}
+    const filter={ available: true}
     if( fasting==="true"){
       filter.isFasting=true;
     }
-    const items = await MenuItem.find(filter).populate("category", "name");
+    const items = await Menu.find({}).populate("category", "name");
     res.json(items);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -36,12 +37,12 @@ router.get("/search", async(req,res)=>{
   try{
     const filter={
       name:{ $regex:q, $options:"i"},
-      active:true
+      available:true
     }
     if(fasting==="true"){
       filter.isFasting=true;
     }
-    const results=await Menu.find(filter).populate("category", "menu")
+    const results=await Menu.find({}).populate("category", "name")
     res.json(results);
   }
   catch(error){

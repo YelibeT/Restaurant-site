@@ -2,28 +2,208 @@
   {
     "name": "Dirikosh Firfir",
     "price": 1000,
-    "description": "Traditional Ethiopian firfir",
+    "description": "Description",
     "category": "Non-fasting",
     "available": true,
-    "fasting": false,
+    "isFasting": false,
     "image": "/images/ድርቆሽ.jpg"
   },
   {
-    "name": "Tegebino",
-    "price": 850,
-    "description": "Spicy fasting shiro",
+    "name": "Tibs Firfir",
+    "price": null,
+    "description": "Description",
+    "category": "Non-fasting",
+    "available": true,
+    "isFasting": false,
+    "image": "/images/ጥብስፍ.jpg"
+  },
+  {
+    "name": "Chikna Tibs",
+    "price": null,
+    "description": "Description",
+    "category": "Non-fasting",
+    "available": true,
+    "isFasting": false,
+    "image": "/images/ጭቅናጥ.jpg"
+  },
+  {
+    "name": "Qiqil",
+    "price": null,
+    "description": "Description",
+    "category": "Non-fasting",
+    "available": true,
+    "isFasting": false,
+    "image": "/images/ቅቅል.jpg"
+  },
+  {
+    "name": "Tehilo",
+    "price": null,
+    "description": "Description",
+    "category": "Non-fasting",
+    "available": true,
+    "isFasting": false,
+    "image": "/images/ጥህሎ.jpg"
+  },
+  {
+    "name": "Quanta Firfir",
+    "price": null,
+    "description": "Description",
+    "category": "Non-fasting",
+    "available": true,
+    "isFasting": false,
+    "image": "/images/ቋንጣፍ.jpg"
+  },
+  {
+    "name": "Firfir",
+    "price": null,
+    "description": "Description",
+    "category": "Non-fasting",
+    "available": true,
+    "isFasting": false,
+    "image": "/images/ፍርፍር1.jpg"
+  },
+  {
+    "name": "Firfir with Butter",
+    "price": null,
+    "description": "Description",
+    "category": "Non-fasting",
+    "available": true,
+    "isFasting": false,
+    "image": "/images/ፍርፍር.jpg"
+  },
+  {
+    "name": "Enkulal Firfir",
+    "price": null,
+    "description": "Description",
+    "category": "Non-fasting",
+    "available": true,
+    "isFasting": false,
+    "image": "/images/ዕንቁላልፍ.jpg"
+  },
+  {
+    "name": "Shiro with Butter",
+    "price": null,
+    "description": "Description",
+    "category": "Non-fasting",
+    "available": true,
+    "isFasting": false,
+    "image": "/images/ሽሮበቅቤ.jpg"
+  },
+  {
+    "name": "Bozena Shiro",
+    "price": null,
+    "description": "Description",
+    "category": "Non-fasting",
+    "available": true,
+    "isFasting": false,
+    "image": "/images/ቦዘናሽ.jpg"
+  },
+  {
+    "name": "Chechebsa",
+    "price": null,
+    "description": "Description",
+    "category": "Non-fasting",
+    "available": true,
+    "isFasting": false,
+    "image": "/images/ጨጨብሳ.jpg"
+  },
+  {
+    "name": "Gomen Besiga",
+    "price": null,
+    "description": "Description",
+    "category": "Non-fasting",
+    "available": true,
+    "isFasting": false,
+    "image": "/images/ጎመንበስጋ.jpg"
+  },
+  {
+    "name": "Gomen Kitifo",
+    "price": null,
+    "description": "Description",
+    "category": "Non-fasting",
+    "available": true,
+    "isFasting": false,
+    "image": "/images/ጎመንክትፎ.jpg"
+  },
+  {
+    "name": "Special Kitifo",
+    "price": null,
+    "description": "Description",
+    "category": "Non-fasting",
+    "available": true,
+    "isFasting": false,
+    "image": "/images/ክትፎ.jpg"
+  },
+  {
+    "name": "Awaze Tibis",
+    "price": null,
+    "description": "Description",
+    "category": "Non-fasting",
+    "available": true,
+    "isFasting": false,
+    "image": "/images/አዋዜጥብስ.jpeg"
+  },
+  {
+    "name": "Dulet",
+    "price": null,
+    "description": "Description",
+    "category": "Non-fasting",
+    "available": true,
+    "isFasting": false,
+    "image": "/images/ዱለት.jpg"
+  },
+  {
+    "name": "Dirikosh Firfir",
+    "price": null,
+    "description": "Description",
     "category": "Fasting",
     "available": true,
-    "fasting": true,
+    "isFasting": true,
+    "image": "/images/ድርቆሽፍ.jpg"
+  },
+  {
+    "name": "Tegebino",
+    "price": null,
+    "description": "Description",
+    "category": "Fasting",
+    "available": true,
+    "isFasting": true,
     "image": "/images/ተጋቢኖ.jpg"
   },
   {
-    "name": "Kitfo",
-    "price": 1200,
-    "description": "Minced raw beef with spices",
-    "category": "Non-fasting",
+    "name": "Beyeayinet",
+    "price": null,
+    "description": "Description",
+    "category": "Fasting",
     "available": true,
-    "fasting": false,
-    "image": "/images/kitfo.jpg"
+    "isFasting": true,
+    "image": "/images/በየ.jpg"
+  },
+  {
+    "name": "Yetsom Combo",
+    "price": null,
+    "description": "Description",
+    "category": "Fasting",
+    "available": true,
+    "isFasting": true,
+    "image": "/images/የጾምኮምቦ.jpg"
+  },
+  {
+    "name": "Firfir",
+    "price": null,
+    "description": "Description",
+    "category": "Fasting",
+    "available": true,
+    "isFasting": true,
+    "image": "/images/ፍርፍር1.jpg"
+  },
+  {
+    "name": "Chechebsa",
+    "price": null,
+    "description": "Description",
+    "category": "Fasting",
+    "available": true,
+    "isFasting": true,
+    "image": "/images/ጨጨብሳ.jpg"
   }
 ]

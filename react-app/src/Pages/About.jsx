@@ -3,11 +3,11 @@ import React from "react";
 export default function About() {
   return (
     <div>
-      <div class="welcome">
-        <div class="welcome-img">
+      <div className="welcome">
+        <div className="welcome-img">
           <img src="/images/aboutethiopia.jpg"></img>
         </div>
-        <div class="welcome-text">
+        <div className="welcome-text">
           <h1>Welcome to Abyssinia Restaurant</h1>
           <p>
             A place where culture meets authenticity. We intend on promoting our
@@ -15,23 +15,23 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div class="about">
-        <div class="about-text">
+      <div className="about">
+        <div className="about-text">
           <h1>About Us</h1>
           <p>
             Abyssinia is a restaurant based on Addis Ababa, Ethiopia. The name
             represents our identity, which is the former name of our country.{" "}
           </p>
         </div>
-        <div class="about-img">
+        <div className="about-img">
           <img src="/images/ethio.jpg"></img>
         </div>
       </div>
-      <div class="vision">
-        <div class="about-img">
+      <div className="vision">
+        <div className="about-img">
           <img src="/images/ethio.jpg"></img>
         </div>
-        <div class="Vision-text">
+        <div className="Vision-text">
           <h1>Our Vision</h1>
           <p>
             To establish a global image with our exceptional food experience.

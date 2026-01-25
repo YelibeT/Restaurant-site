@@ -9,8 +9,8 @@ export default function Menu() {
   const [count, setCount] = useState(0);
   const [cart, setCart] = useState([]);
   const [activeItem, setActiveItem] = useState(null);
+  const [isOrdering, setIsOrdering] = useState(false);
 
-  // Reset count whenever a new item is selected
   useEffect(() => {
     setCount(0);
   }, [activeItem]);
@@ -50,10 +50,9 @@ export default function Menu() {
       return [...prevCart, { menuItem: item.id, name: item.name, price: item.price, quantity }];
     });
 
-    setActiveItem(null); // Close popup after adding
+    setActiveItem(null); 
   };
 
-  // ... (JSX remains largely the same, but use the new logic below)
   return (
     <div className="menu-layout">
       <div className="menu-section">

@@ -11,8 +11,12 @@ function Navbar() {
           <Link to="/menu">Menu</Link>
         </li>
         <li>
+          <Link to="/OrderSuccess">Orders</Link>
+        </li>
+        <li>
           <Link to="/about">About</Link>
         </li>
+        
       </ul>
     </nav>
   );

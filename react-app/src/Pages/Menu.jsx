@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Menu() {
   const [query, setQuery] = useState("");
@@ -52,6 +53,14 @@ export default function Menu() {
 
     setActiveItem(null); 
   };
+// Inside Menu component:
+const navigate = useNavigate();
+
+const gotoCheckout = () => {
+  if (cart.length === 0) return;
+  // Pass the cart data to the next route
+  navigate("/checkout", { state: { cart } });
+};
 
   return (
     <div className="menu-layout">
@@ -193,7 +202,8 @@ export default function Menu() {
                 birr
               </strong>
             </p>
-            <button>Place Order</button>
+            <button 
+            onClick={gotoCheckout}>Procedd to Checkout</button>
           </>
         )}
       </div>

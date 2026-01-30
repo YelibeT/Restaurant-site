@@ -1,136 +1,137 @@
 :root{
-    --background: #A0AEC0;
-    --background-dish: #c2c2bc;
-    --food-hover: #3f3f3f;
-    --background-button: #202020;
-    --btn: #c9c9c9;
-    --btn-hover: #ffffff;
-    --text-color: #000000;
-    --footer:#e0e0e0;
+  --background: #A0AEC0;
+  --background-dish: #c2c2bc;
+  --food-hover: #3f3f3f;
+  --background-button: #202020;
+  --btn: #c9c9c9;
+  --btn-hover: #ffffff;
+  --text-color: #000000;
+  --footer:#e0e0e0;
 }
 body{
-    background-color: var(--background);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--text-color);
+  background-color: var(--background);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
 }
 nav{
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 .navs{
-    display: flex;
-    list-style: none;
-    gap: 30px;
+  display: flex;
+  list-style: none;
+  gap: 30px;
 }
 .navs a{
-    padding: 8px 18px;
-    border-radius: 25px;
-    background-color: var(--background-button);
-    color: white;
-    font-weight: 600;
-    transition: 0.3s;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  padding: 8px 18px;
+  border-radius: 25px;
+  background-color: var(--background-button);
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
 form{
-    position: relative;
-    margin: auto;
-    width: 400px;
+  position: relative;
+  margin: auto;
+  width: 400px;
 }
 #search-input{
-    box-sizing: border-box;
-    padding: 12px 20px;
-    width: 100%;
-    background: none;
-    border: 2px solid var(--food-hover);
-    border-radius: 1000px;
-    font: inherit;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    background-color: var(--background-button);
-    caret-color: white;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  width: 100%;
+  background: none;
+  border: 2px solid var(--food-hover);
+  border-radius: 1000px;
+  font: inherit;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  background-color: var(--background-button);
+  caret-color: white;
 }
 #search-input::placeholder{
-    color: white;
+  color: white;
 }
 #search-input:focus{
-    outline: var(--background);
+  outline: var(--background);
 }
 #search-btn{
-    position: absolute;
-    height: 100%;
-    top: 0;
-    right: 0;
-    padding: 0 30px;
-    border: none;
-    border-radius: 1000px;
-    font: inherit;
-    font-weight: 600;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  padding: 0 30px;
+  border: none;
+  border-radius: 1000px;
+  font: inherit;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 #search-btn:hover{
-    background-color: var(--food-hover);
-    color: white;
+  background-color: var(--food-hover);
+  color: white;
 }
 #menu{
-    color:black;
+  color:black;
 }
 .dishes{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 h1{
-    grid-column: 1/-1;
-    text-align: center;
+  grid-column: 1/-1;
+  text-align: center;
 }
 .dishes h2{
-    justify-self:center;
-    text-align: center;
-    background-color: var(--background-button);
-    padding: 10px 20px;
-    width: 200px;
-    color: white;
-    border-radius: 50px;
+  justify-self:center;
+  text-align: center;
+  background-color: var(--background-button);
+  padding: 10px 20px;
+  width: 200px;
+  color: white;
+  border-radius: 50px;
 }
 .food{
-    margin-top: 20px;
-    gap: 10px;
-    background-color: var(--background-dish);
-    padding: 15px;
-    border-radius:50px;
-    font-size: 25px;
-    transition: 300ms ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  margin-top: 20px;
+  gap: 10px;
+  background-color: var(--background-dish);
+  padding: 15px;
+  border-radius:50px;
+  font-size: 25px;
+  transition: 300ms ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 .food a {
-    display: flex;
-    justify-self: center;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  justify-self: center;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
 }
+
 .food:hover{
-    background-color: var(--food-hover);
+  background-color: var(--food-hover);
 }
 
 img{
-    width: 200px !important;
-    height: 200px !important;
-    height: auto;
-    object-fit: cover;
-    border-radius:50%;   
-    transition:600ms ease;
+  width: 200px !important;
+  height: 200px !important;
+  height: auto;
+  object-fit: cover;
+  border-radius:50%; 
+  transition:600ms ease;
 }
 img:hover{
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 a{
-    text-decoration: none;
-    color: var(--text-color);
-    transition:300ms ease;
+  text-decoration: none;
+  color: var(--text-color);
+  transition:300ms ease;
 }
 a:hover{
-    color: var(--btn-hover);
+  color: var(--btn-hover);
 }
 nav {
   display: flex;
@@ -150,17 +151,51 @@ nav {
   transition: 0.3s;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
+/* 1. Define the animation */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px); /* Start 100px to the left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);     /* End at original position */
+  }
+}
+
+/* 2. Apply it to your text */
+.intro h1 {
+  margin: 0;
+  animation: slideInLeft 0.9s ease-out forwards;
+}
+
+.intro h2 {
+  margin: 0;
+  /* Adding a small delay (0.2s) makes the slogan follow the title for a premium feel */
+  animation: slideInLeft 0.9s ease-out 0.5s forwards;
+  opacity: 0; /* Keeps it hidden until the animation starts */
+}
 .intro {
-  color: rgb(0, 0, 0);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-image: url('');
+  color: rgb(255, 255, 255);
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIEGp-xpeNwkZBu2tD-cpRcTJeOdaLlP70A&s');
   background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  image-rendering: -webkit-optimize-contrast;
   height: 80vh;
   background-attachment: fixed;
   transition: 300ms ease;
+  display: flex;
+  flex-direction: column; /* This puts them side-by-side */
+  justify-content: center; /* Centers them horizontally */
+  align-items:center;
+  text-align: center; /* Aligns text by the bottom edge of the letters */
+  gap: 20px; /* Adds space between the title and the subtitle */
+}
+
+/* Optional: Adjust margins if they are pushing the text apart */
+.intro h1, .intro h2 {
+  margin: 0;
 }
 .specials {
   text-align: center;
@@ -220,42 +255,44 @@ footer {
   color: #555;
 }
 .welcome , .about, .vision{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    background-color: var(--about-hover);
-    border-radius: 25px;
-    margin: 30px;
-    padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background-color: var(--about-hover);
+  border-radius: 25px;
+  margin: 30px;
+  padding: 20px;
 }
 img{
-    width: 200px !important;
-    height: 200px !important;
-    height: auto;
-    object-fit: cover;
-    border-radius:50%;   
-    transition:600ms ease;
+  width: 200px !important;
+  height: 200px !important;
+  height: auto;
+  object-fit: cover;
+  border-radius:50%;
+  transition:600ms ease;
 }
 img:hover{
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 footer{
-    background-color: var(--footer);
-    color: black;
-    padding: 25px 20px;
-    font-size: 16px;
-    margin-top: 50px;
-    box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+  background-color: var(--footer);
+  color: black;
+  padding: 25px 20px;
+  font-size: 16px;
+  margin-top: 50px;
+  box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
 }
-a:hover{
-    color: var(--btn-hover);
+a:hover {
+  color: var(--btn-hover);
 }
+
 .menu-layout {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 20px;
 }
+
 /* Dark background overlay */
 .popup {
   position: fixed;
@@ -382,14 +419,16 @@ a:hover{
 .cart-item button {
   margin: 0 5px;
 }
-#btn,#reset-btn{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 10px;
-    width:100%;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 5px;
+
+#btn, #reset-btn {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 5px;
 }
+
 .order-receipt-container {
   display: flex;
   justify-content: center;
@@ -402,10 +441,10 @@ a:hover{
   background: white;
   padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   max-width: 400px;
   width: 100%;
-  border-top: 8px solid #e67e22; /* Restaurant theme color */
+  border-top: 8px solid #e67e22;
 }
 
 .receipt-item {
@@ -415,4 +454,38 @@ a:hover{
 
 .empty-order-state h2 {
   color: #2c3e50;
+}
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Slider Buttons */
+.slider-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 20px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s;
+  user-select: none;
+}
+
+.slider-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Slide Animation Fix */
+/* Adding a 'key' in React (as done above) re-triggers these animations */
+.slide-text {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.slide-text.delay {
+  animation-delay: 0.2s;
+  opacity: 0;
 }

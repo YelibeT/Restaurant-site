@@ -1,7 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Home() {
   const [activeItem, setActiveItem] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const heroImages = [
+    "/images/hero1.avif",
+    "/images/hero2.jpg",
+    "/images/hero3.jpg"
+  ];
 
   const specials = [
     {
@@ -24,20 +31,45 @@ export default function Home() {
     }
   ];
 
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev === heroImages.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? heroImages.length - 1 : prev - 1));
+  };
+
+  // Optional: Auto-play every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(nextSlide, 5000);
+    return () => clearInterval(timer);
+  }, [currentIndex]);
+
   return (
-    <div>
-      {/* HERO */}
+    <div className="animate-fade">
+      {/* SINGLE HERO SECTION WITH SLIDER */}
       <section id="Home" className="hero">
-        <div className="intro">
-          <h1>Abyssinia Restaurant</h1>
-          <h2>Authentic Taste of Ethiopian Cuisine</h2>
+        <div 
+          className="intro" 
+          style={{ 
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${heroImages[currentIndex]})`,
+            transition: 'background-image 0.8s ease-in-out'
+          }}
+        >
+          <button className="slider-btn left" onClick={prevSlide}>&#10094;</button>
+          
+          <div className="text-content">
+            <h1 key={`h1-${currentIndex}`} className="slide-text">Abyssinia Restaurant</h1>
+            <h2 key={`h2-${currentIndex}`} className="slide-text delay">Authentic Taste of Ethiopian Cuisine</h2>
+          </div>
+
+          <button className="slider-btn right" onClick={nextSlide}>&#10095;</button>
         </div>
       </section>
 
       {/* SPECIALS */}
       <section className="services">
         <h3>Chef's Specialities</h3>
-
         <div className="specials">
           {specials.map((item) => (
             <div
@@ -55,21 +87,11 @@ export default function Home() {
       {/* POPUP */}
       {activeItem && (
         <div className="popup" onClick={() => setActiveItem(null)}>
-          <div
-            className="popup-window"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              className="close"
-              onClick={() => setActiveItem(null)}
-            >
-              &times;
-            </button>
-
+          <div className="popup-window" onClick={(e) => e.stopPropagation()}>
+            <button className="close" onClick={() => setActiveItem(null)}>&times;</button>
             <img src={activeItem.image} alt={activeItem.name} />
             <h4>{activeItem.name}</h4>
             <p>{activeItem.description}</p>
-
             <button id="popup-btn">Order</button>
           </div>
         </div>

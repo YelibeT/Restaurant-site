@@ -10,7 +10,6 @@ const menuSchema = new mongoose.Schema({
     required: true,
   },
   available: { type: Boolean, default: true },
-  isFasting: { type: Boolean, default: false, required: true },
   image: { type: String },
 });
 const Menu = mongoose.model("Menu", menuSchema);

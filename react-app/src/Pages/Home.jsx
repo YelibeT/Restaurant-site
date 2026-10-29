@@ -39,11 +39,11 @@ export default function Home() {
     setCurrentIndex((prev) => (prev === 0 ? heroImages.length - 1 : prev - 1));
   };
 
-  // Optional: Auto-play every 5 seconds
+  
   useEffect(() => {
     const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
-  }, [currentIndex]);
+  }, [nextSlide]);
 
   return (
     <div className="animate-fade">

@@ -5,15 +5,14 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 export default function Menu() {
   const [query, setQuery] = useState("");
-  const [fasting, setFasting] = useState(false);
+  const [fasting, isFasting] = useState(false)
   const [menuItems, setMenuItems] = useState([]);
   const [loading, setLoading] = useState(false);
   const [count, setCount] = useState(0);
   const [activeItem, setActiveItem] = useState(null);
-  const [isOrdering, setIsOrdering] = useState(false);
   const location = useLocation();
   const [cart, setCart] = useState(location.state?.existingItems || []);
-  const updatingOrderId = location.state?.updatingOrderId;
+  // const updatingOrderId = location.state?.updatingOrderId;
 
   useEffect(() => {
     setCount(0);
@@ -24,7 +23,7 @@ export default function Menu() {
       setLoading(true);
       const params = new URLSearchParams();
       if (query) params.append("q", query);
-      if (fasting) params.append("fasting", "true");
+      if (isFasting) params.append("fasting", "true");
 
       const endpoint = query ? "search" : "items";
       const { data } = await axios.get(`http://localhost:5000/api/menu/${endpoint}?${params.toString()}`);
@@ -58,10 +57,6 @@ export default function Menu() {
   };
 // Inside Menu component:
 const navigate = useNavigate();
-const storedUser = localStorage.getItem("userInfo");
-
-// 2. Convert it from a string back into a JavaScript object
-const user = JSON.parse(storedUser);
 
 const gotoCheckout = () => {
   const userInfo = localStorage.getItem("userInfo");
@@ -75,17 +70,17 @@ const gotoCheckout = () => {
     navigate("/checkout", { state: { cart: cart } });
   }
 };
-  const handleConfirmUpdate = async () => {
-  try {
-    await axios.put(`http://localhost:5000/api/orders/update/${updatingOrderId}`, {
-      items: cart
-    });
-    alert("Order updated with new items!");
-    navigate("/order-success", { state: { phone: user?.phone } });
-  } catch (err) {
-    alert("Update failed");
-  }
-};
+  // const handleConfirmUpdate = async () => {
+  // try {
+  //   await axios.put(`http://localhost:5000/api/orders/update/${updatingOrderId}`, {
+  //     items: cart
+  //   });
+  //   alert("Order updated with new items!");
+  //   navigate("/order-success", { state: { phone: user?.phone } });
+  // } catch (err) {
+  //   alert("Update failed");
+//   // }
+// };
 
   return (
     <div className="menu-layout">

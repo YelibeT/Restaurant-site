@@ -5,7 +5,6 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 export default function Menu() {
   const [query, setQuery] = useState("");
-  const [fasting, isFasting] = useState(false)
   const [menuItems, setMenuItems] = useState([]);
   const [loading, setLoading] = useState(false);
   const [count, setCount] = useState(0);
@@ -23,7 +22,7 @@ export default function Menu() {
       setLoading(true);
       const params = new URLSearchParams();
       if (query) params.append("q", query);
-      if (isFasting) params.append("fasting", "true");
+      
 
       const endpoint = query ? "search" : "items";
       const { data } = await axios.get(`http://localhost:5000/api/menu/${endpoint}?${params.toString()}`);

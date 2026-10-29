@@ -19,7 +19,7 @@ export default function Checkout() {
       setCustomerName(storedUser.name);
       setPhone(storedUser.phone);
     }
-  }, []);
+  }, [storedUser]);
 
 const handlePlaceOrder = async (e) => {
   e.preventDefault(); // Prevents the page from refreshing

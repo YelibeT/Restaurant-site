@@ -6,7 +6,7 @@ import menuRoutes from "./routes/menu.js";
 import orderRoutes from "./routes/orders.js";
 import authRoutes from "./routes/auth.js";
 
-//add restaurant location too-so maybe the map too,buisness hours
+
 dotenv.config();
 const app = express();
 app.use(express.json());

@@ -2,34 +2,31 @@ import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 
+
 export default function Checkout() {
   const location = useLocation();
   const navigate = useNavigate();
   const cart = location.state?.cart || [];
 
-  // 1. Get user from localStorage
-  const storedUser = JSON.parse(localStorage.getItem("userInfo"));
+  const storedUser = JSON.parse(localStorage.getItem());
 
-  // 2. Initialize state with stored data if it exists
   const [customerName, setCustomerName] = useState(storedUser?.name || "");
   const [phone, setPhone] = useState(storedUser?.phone || "");
-  const [address, setAddress] = useState("");
+  
 
-  // Optional: Update state if localStorage changes
   useEffect(() => {
     if (storedUser) {
       setCustomerName(storedUser.name);
       setPhone(storedUser.phone);
     }
   }, []);
-  // 1. Add this function before your 'return'
+
 const handlePlaceOrder = async (e) => {
   e.preventDefault(); // Prevents the page from refreshing
 
   const orderData = {
     customerName,
     phone,
-    address,
     items: cart,
     totalPrice: cart.reduce((acc, item) => acc + (item.price * item.quantity), 0),
     status: "pending"

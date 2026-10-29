@@ -39,12 +39,6 @@ export default function Home() {
     setCurrentIndex((prev) => (prev === 0 ? heroImages.length - 1 : prev - 1));
   };
 
-  
-  useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
-    return () => clearInterval(timer);
-  }, [nextSlide]);
-
   return (
     <div className="animate-fade">
       {/* SINGLE HERO SECTION WITH SLIDER */}

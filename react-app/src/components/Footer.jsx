@@ -8,7 +8,7 @@ export default function Footer() {
           <h3>Ethiopian Cuisine at its finest.</h3>
           <h4>Contact Us</h4>
           <p>
-            Email: <a>abyssiniaeats@gmail.com</a>
+            Email: abyssiniaeats@gmail.com
           </p>
           <p>Address: Addis Ababa, Ethiopia</p>
           <p>Phone Number: 0912345678</p>

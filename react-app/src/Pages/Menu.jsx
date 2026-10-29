@@ -33,7 +33,7 @@ export default function Menu() {
     } finally {
       setLoading(false);
     }
-  }, [query, fasting]);
+  }, [query]);
 
   useEffect(() => {
     const timeout = setTimeout(fetchMenu, 300);
@@ -123,7 +123,7 @@ const gotoCheckout = () => {
         {activeItem !== null && (
           <div className="popup">
             <div className="popup-window">
-              <a
+              <a href="#home"
                 className="close"
                 onClick={(e) => {
                   setActiveItem(null);

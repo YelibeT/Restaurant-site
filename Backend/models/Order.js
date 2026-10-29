@@ -4,8 +4,8 @@ const orderSchema = new mongoose.Schema({
   items: [
     {
       menuItem: { type: mongoose.Schema.Types.ObjectId, ref: "Menu", required: true },
-      name: { type: String, required: true }, // Store name at time of order
-      price: { type: Number, required: true }, // Store price at time of order
+      name: { type: String, required: true }, 
+      price: { type: Number, required: true },
       quantity: { type: Number, default: 1 },
     }
   ],

@@ -12,16 +12,16 @@ router.post("/register", async (req, res) => {
     const savedUser = await newUser.save();
     return res.status(201).json(savedUser);
   } catch (err) {
-    console.error("REGISTER ERROR:", err); // This prints to your terminal
+    console.error("REGISTER ERROR:", err); 
     res.status(500).json({ message: err.message });
   }
 });
 
 // LOGIN
 router.post("/login", async (req, res) => {
-  console.log("Login attempt for:", req.body); // Check your terminal for this!
+  console.log("Login attempt for:", req.body); 
   try {
-    // Trim the phone number in case there are accidental spaces
+    
     const phone = req.body.phone?.trim(); 
     
     const user = await User.findOne({ phone: phone });

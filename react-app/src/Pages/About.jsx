@@ -5,7 +5,7 @@ export default function About() {
     <div>
       <div className="welcome">
         <div className="welcome-img">
-          <img src="/images/aboutethiopia.jpg"></img>
+          <img src="/images/aboutethiopia.jpg" alt="img"></img>
         </div>
         <div className="welcome-text">
           <h1>Welcome to Abyssinia Restaurant</h1>
@@ -24,12 +24,12 @@ export default function About() {
           </p>
         </div>
         <div className="about-img">
-          <img src="/images/ethio.jpg"></img>
+          <img src="/images/ethio.jpg" alt="img"></img>
         </div>
       </div>
       <div className="vision">
         <div className="about-img">
-          <img src="/images/ethio.jpg"></img>
+          <img src="/images/ethio.jpg" alt="img"></img>
         </div>
         <div className="Vision-text">
           <h1>Our Vision</h1>

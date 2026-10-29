@@ -15,11 +15,7 @@ router.get("/categories", async (req, res) => {
 
 router.get("/items", async (req, res) => {
   try {
-    const { fasting } = req.query;
     const filter = { available: true };
-    if (fasting === "true") {
-      filter.isFasting = true;
-    }
     const items = await Menu.find(filter).populate("category", "name");
     res.json(items);
   } catch (err) {
@@ -28,7 +24,7 @@ router.get("/items", async (req, res) => {
 });
 
 router.get("/search", async (req, res) => {
-  const { q, fasting } = req.query;
+  const { q } = req.query;
 
   if (!q) {
     return res.status(400).json({ message: "Query parameter is required" });
@@ -38,9 +34,7 @@ router.get("/search", async (req, res) => {
       name: { $regex: q, $options: "i" },
       available: true,
     };
-    if (fasting === "true") {
-      filter.isFasting = true;
-    }
+    
     const results = await Menu.find(filter).populate("category", "name");
     res.json(results);
   } catch (error) {

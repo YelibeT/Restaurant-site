@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -8,25 +8,17 @@ export default function Checkout() {
   const navigate = useNavigate();
   const cart = location.state?.cart || [];
 
-  const storedUser = JSON.parse(localStorage.getItem());
+  const storedUser = JSON.parse(localStorage.getItem("userInfo"));
 
   const [customerName, setCustomerName] = useState(storedUser?.name || "");
   const [phone, setPhone] = useState(storedUser?.phone || "");
-  
-
-  useEffect(() => {
-    if (storedUser) {
-      setCustomerName(storedUser.name);
-      setPhone(storedUser.phone);
-    }
-  }, [storedUser]);
 
 const handlePlaceOrder = async (e) => {
   e.preventDefault(); // Prevents the page from refreshing
 
   const orderData = {
     customerName,
-    phone,
+    customerPhone: phone,
     items: cart,
     totalPrice: cart.reduce((acc, item) => acc + (item.price * item.quantity), 0),
     status: "pending"
@@ -37,7 +29,7 @@ const handlePlaceOrder = async (e) => {
     alert("Order placed successfully!");
     
     // 2. After ordering, send them to the success page
-    navigate("/order-success", { state: { phone: data.phone } });
+    navigate("/order-success", { state: { phone: data.customerPhone } });
   } catch (err) {
     console.error("Order failed", err);
     alert("Could not place order. Please try again.");

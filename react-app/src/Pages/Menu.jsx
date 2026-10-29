@@ -138,7 +138,7 @@ const gotoCheckout = () => {
               >
                 &times;
               </a>
-              <img src={activeItem.image} alt="" />
+              <img src={activeItem.image} alt="active" />
               <h4>{activeItem.name}</h4>
               <p>Description: {activeItem.description}</p>
               <p>Price: {activeItem.price}</p>
